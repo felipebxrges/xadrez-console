@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace xadrezconsolecsharp.Tabuleiro.Exceptions
 {
-    internal class TabuleiroException
+    internal class TabuleiroException : Exception
     {
+        public TabuleiroException(string msg) : base(msg)
+        {
+
+        }
     }
 }

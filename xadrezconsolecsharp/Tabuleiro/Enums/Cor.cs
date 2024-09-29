@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace xadrezconsolecsharp.Tabuleiro.Enums
 {
-    internal class Cor
+    enum Cor
     {
+        Branca,
+        Preta
     }
 }
