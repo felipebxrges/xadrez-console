@@ -1,15 +1,10 @@
-﻿using xadrezconsolecsharp.Tabuleiro;
-using xadrezconsolecsharp.Tabuleiro.Enums;
-using xadrezconsolecsharp.Xadrez;
+﻿using xadrez;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        Tabuleiro tab = new Tabuleiro(8, 8);
-
-        PosicaoXadrez pos = new PosicaoXadrez('c', 1);
-        Console.WriteLine(pos);
-        Console.WriteLine(pos.toPosicao());
+        PartidaDeXadrez partida = new PartidaDeXadrez();
+        Tela.imprimirTabuleiro(partida.tab);
     }
 }

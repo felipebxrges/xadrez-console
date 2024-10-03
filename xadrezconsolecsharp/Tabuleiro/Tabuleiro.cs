@@ -1,6 +1,5 @@
-﻿ using xadrezconsolecsharp.Tabuleiro.Exceptions;
-    
-namespace xadrezconsolecsharp.Tabuleiro
+﻿    
+namespace xadrez
     {
         internal class Tabuleiro
         {
@@ -54,6 +53,18 @@ namespace xadrezconsolecsharp.Tabuleiro
                 validarPosicao(pos);
                 return Peca(pos) != null;
             }
+
+            public Peca retirarPeca(Posicao pos)
+            {
+                if (Peca(pos) == null)
+                {
+                    return null;
+                }
+                Peca aux = Peca(pos);
+                aux.Posicao = null;
+                pecas[pos.linha, pos.coluna] = null;
+                return aux;
+            }        
         }
     }
 

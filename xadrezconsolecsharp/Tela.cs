@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using xadrezconsolecsharp.Tabuleiro.Enums;
 
 
-namespace xadrezconsolecsharp.Tabuleiro
+namespace xadrez
 {
     internal class Tela
     {
@@ -14,7 +13,7 @@ namespace xadrezconsolecsharp.Tabuleiro
         {
             for (int i = 0; i < tab.linhas; i++)
             {
-                Console.Write(8-i);
+                Console.Write(8 - i + " ");
                 for (int j = 0; j < tab.colunas; j++)
                 {
                     if (tab.Peca(i, j) != null)
@@ -24,7 +23,7 @@ namespace xadrezconsolecsharp.Tabuleiro
                     }
                     else
                     {
-                        Console.Write(" -");
+                        Console.Write("- ");
                     }
                 }
                 Console.WriteLine();
@@ -32,7 +31,7 @@ namespace xadrezconsolecsharp.Tabuleiro
             Console.WriteLine("  a b c d e f g h");
         }
 
-        public static void imprimirPeca(Peca peca)
+        private static void imprimirPeca(Peca peca)
         {
             if(peca.Cor == Cor.Branca)
             {

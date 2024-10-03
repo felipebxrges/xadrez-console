@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using xadrezconsolecsharp.Tabuleiro.Enums;
 
-namespace xadrezconsolecsharp.Tabuleiro
+namespace xadrez
 {
     internal class Peca
     {
@@ -20,6 +19,11 @@ namespace xadrezconsolecsharp.Tabuleiro
             Tabuleiro = tabuleiro;
             Cor = cor;
             qntMovimentos = 0;
+        }
+        
+        public void incrementarMovimentos()
+        {
+            qntMovimentos++;
         }
     }
 }

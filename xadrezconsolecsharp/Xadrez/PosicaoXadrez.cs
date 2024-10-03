@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using xadrezconsolecsharp.Tabuleiro;
 
-namespace xadrezconsolecsharp.Xadrez
+namespace xadrez
 {
     internal class PosicaoXadrez
     {
