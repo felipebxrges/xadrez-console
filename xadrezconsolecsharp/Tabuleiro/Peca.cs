@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace xadrez
 {
-    internal class Peca
+    internal abstract class Peca
     {
         public Posicao Posicao { get; set; }
         public Cor Cor { get; set; }
@@ -25,5 +25,7 @@ namespace xadrez
         {
             qntMovimentos++;
         }
+
+        public abstract bool[,] movimentosPossiveis(); //matriz de movimentos possiveis, é abstrato pois a classe peca é muito genérica
     }
 }
