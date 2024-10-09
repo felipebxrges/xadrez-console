@@ -26,6 +26,11 @@ namespace xadrez
             qntMovimentos++;
         }
 
+        public void decrementarMovimentos()
+        {
+            qntMovimentos--;
+        }
+
         public bool existeMovimentosPossiveis()
         {
             bool[,] mat = movimentosPossiveis();
