@@ -26,6 +26,27 @@ namespace xadrez
             qntMovimentos++;
         }
 
+        public bool existeMovimentosPossiveis()
+        {
+            bool[,] mat = movimentosPossiveis();
+            for(int i = 0; i < Tabuleiro.linhas; i++)
+            {
+                for(int j = 0; j < Tabuleiro.colunas; j++)
+                {
+                    if (mat[i, j])
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public bool podeMoverPara(Posicao pos)
+        {
+            return movimentosPossiveis()[pos.linha, pos.coluna];
+        }
+
         public abstract bool[,] movimentosPossiveis(); //matriz de movimentos possiveis, é abstrato pois a classe peca é muito genérica
     }
 }
