@@ -30,7 +30,7 @@ internal class Program
                     Posicao destino = Tela.lerPosicaoXadrez().toPosicao();
                     partida.validarPosicaoDestino(origem, destino);
 
-                    partida.executaMovimento(origem, destino);
+                    partida.realizaJogada(origem, destino);
                 }
                 catch(TabuleiroException ex)
                 {
